@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Complate website in html css and javascript in Hindi</title>
+    <link rel ="stylesheet" type="text/css" href ="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    
+
+</head>
+<body>
+    <header> 
+        <nav>
+            <div class="logo">
+            photo<span>pi</span>x6
+             </div>
+             <div class="menu">
+             <a href='#'>Home</a>
+             <a href='#'>About</a>
+             <a href='#'>Gallary</a>
+             <a href='#'>Contact</a>
+             </div>
+             <div class="icon">
+                <i class="fas fa-search"></i>
+                 <a href="#">Login</a>
+
+             </div>
+        </nav>
+        <section class="h-text">
+            <i class="fa fa-search"></i>
+            <h1>Capturing the moments that captivate your heart.</h1>
+            <input type="text" name="" placeholder="Search here...">
+            <button><i class="fa fa-search"></i></button>
+        </section>
+    </header>
+     <section class="filter-gallery">
+         <div class="portfolio-menu">
+          <ul>   
+         <li class="active" data-filter="*">All</li>
+         <li data-filter= ".nature">Nature</li>
+         <li data-filter=".faishon">Fashion</li>
+         <li data-filter=".wedding">Wedding</li>
+        </ul>
+        <div>
+          <div class="portfolio-item">
+              <div class="item nature">
+                  <img src="images/yk.jpg" width="100" height="100">
+              </div>
+              <div class="item Fashion">
+                <img src="images/photo.jpg" width="100" height="100">
+            </div>
+            <div class="item wedding">
+                <img src="images/wed.jpg" width="100" height="100">
+            </div>
+            <div class="item wedding">
+                <img src="images/s5.jpg" width="100" height="100">
+            </div>
+            <div class="item wedding">
+                <img src="images/s6.jpg" width="100" height="100">
+            </div>
+            <div class="item wedding">
+                <img src="images/s7.jpg" width="100" height="100">
+            </div>
+            <div class="item nature">
+                <img src="images/nature1.jpg" width="100" height="100">
+            </div>
+            <div class="item Fashion">
+              <img src="images/photo1.jpg" width="100" height="100">
+          </div>
+          <div class="item wedding">
+              <img src="images/wed1.jpg" width="100" height="100">
+          </div>
+          <div class="item nature">
+            <img src="images/nature2.jpg" width="100" height="100">
+        </div>
+        <div class="item Fashion">
+          <img src="images/photo2.jpg" width="100" height="100">
+      </div>
+      <div class="item wedding">
+          <img src="images/wed2.jpg" width="100" height="100">
+      </div>
+      <div class="item nature">
+        <img src="images/nature3.jpg" width="100" height="100">
+    </div>
+    <div class="item Fashion">
+      <img src="images/photo3.jpg" width="100" height="100">
+  </div>
+  <div class="item wedding">
+      <img src="images/wed4.jpg" width="100" height="100">
+  </div>
+          </div>
+        </div>
+
+     </section>
+     <section class="member">
+         <div class="member-info">
+             <h1>Our<span> Information</span></h1>
+         </div>
+         <div class="member-card">
+             <img src="images/icon.jpg">
+             <p>
+                 I AM A CODER
+             </p>
+             <h2>Yogesh kendre</h2>
+               <img src="images/fs.jpg" width="100">
+               <img src="images/tw.png" width="100">
+               <img src="images/in.png" width="100">
+               <img src="images/wh.jpg" width="150">
+         </div>
+         <div class="m-images">
+             <img src="images/s1.jpg">
+             <img src="images/s2.jpg">
+             <img src="images/s3.jpg">
+             <img src="images/s4.jpg">
+            
+         </div>
+         
+
+     </section>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+      </script>
+     
+     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>"
+
+     <script type="text/javascript">
+         $('.portfolio-item').isotope({
+  // options
+     itemSelector: '.item',
+                   layoutMode: 'fitRows'
+    });              
+       
+              $('.portfolio-menu ul li').click(function(){
+        $('.portfolio-menu ul li').removeClass('active');
+        $(this).addClass('active');
+
+    
+    var selecter = $(this).attr('data-filter');
+    $('.portfolio-item').isotope({
+        filter:selecter
+    });
+    return false
+    });
+     </script>
+</body>
+</html>
